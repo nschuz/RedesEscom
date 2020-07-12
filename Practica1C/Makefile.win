@@ -1,0 +1,25 @@
+# Project: practica1redes
+# Makefile created by Dev-C++ 5.11
+
+CPP      = g++.exe
+CC       = gcc.exe
+WINDRES  = windres.exe
+OBJ      = 
+LINKOBJ  = 
+LIBS     = -L"D:/Dev/Dev-Cpp/MinGW64/lib32" -L"D:/Dev/Dev-Cpp/MinGW64/x86_64-w64-mingw32/lib32" -static-libgcc -L"C:/Users/nschu/OneDrive/Escritorio/wpdpack redes/WpdPack/Lib" "../wpdpack redes/WpdPack/Lib/wpcap.lib" -m32
+INCS     = -I"D:/Dev/Dev-Cpp/MinGW64/include" -I"D:/Dev/Dev-Cpp/MinGW64/x86_64-w64-mingw32/include" -I"D:/Dev/Dev-Cpp/MinGW64/lib/gcc/x86_64-w64-mingw32/4.9.2/include" -I"C:/Users/nschu/OneDrive/Escritorio/wpdpack redes/WpdPack/Include/pcap" -I"C:/Users/nschu/OneDrive/Escritorio/wpdpack redes/WpdPack/Include"
+CXXINCS  = -I"D:/Dev/Dev-Cpp/MinGW64/include" -I"D:/Dev/Dev-Cpp/MinGW64/x86_64-w64-mingw32/include" -I"D:/Dev/Dev-Cpp/MinGW64/lib/gcc/x86_64-w64-mingw32/4.9.2/include" -I"D:/Dev/Dev-Cpp/MinGW64/lib/gcc/x86_64-w64-mingw32/4.9.2/include/c++" -I"C:/Users/nschu/OneDrive/Escritorio/wpdpack redes/WpdPack/Include/pcap" -I"C:/Users/nschu/OneDrive/Escritorio/wpdpack redes/WpdPack/Include"
+BIN      = practica1redes.exe
+CXXFLAGS = $(CXXINCS) -m32
+CFLAGS   = $(INCS) -m32
+RM       = rm.exe -f
+
+.PHONY: all all-before all-after clean clean-custom
+
+all: all-before $(BIN) all-after
+
+clean: clean-custom
+	${RM} $(OBJ) $(BIN)
+
+$(BIN): $(OBJ)
+	$(CPP) $(LINKOBJ) -o $(BIN) $(LIBS)
